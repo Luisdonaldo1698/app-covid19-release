@@ -19,6 +19,7 @@ import { ComponentsModule } from './components/components.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { DoctorModule } from './pages/doctores/doctor/doctor.module';
 import { PipesModule } from './pipes/pipes.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,12 @@ import { PipesModule } from './pipes/pipes.module';
     DoctorModule,
     PipesModule,
     AngularFireStorageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [
     AngularFirestore,
