@@ -38,7 +38,7 @@
         </div>
 
         <!-- cedula -->
-        <div *ngIf="rol !== 'doctor'">
+        <div *ngIf="rol === 'doctor'">
             <span class="p-float-label">
               <input type="text" autocomplete="off" pInputText formControlName="cedula" maxlength="50"/>
               <label for="float-input">Cedula</label>

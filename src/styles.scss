@@ -9,3 +9,16 @@
 .mensajeError {
     color: red;
 }
+
+.main {
+    position: relative;
+}
+
+.installButtonbanner {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 -5px 10px black;
+    bottom: 0;
+    padding: 10px;
+}
