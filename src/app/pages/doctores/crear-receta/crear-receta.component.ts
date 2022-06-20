@@ -126,6 +126,7 @@ export class CrearRecetaComponent implements OnInit {
       pdf.add(
         new Stack([
           `Doctor: ${user?.nombre.toUpperCase()}`,
+          `Cédula: ${user?.cedula ? user.cedula: 'NA'}`,
           `Fecha: ${momentDate}`,
           `Paciente: ${registro.paciente.nombre.toUpperCase()}`
         ]).margin([30, 15, 30, 5]).bold().end

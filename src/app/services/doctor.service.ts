@@ -77,7 +77,6 @@ export class DoctorService {
   }
 
   updateProfile(id: string, user: UserModel): Promise<void>{
-    user.telefono = user.telefono?.toString();
     return this.doctorCollection.doc(id).update(user);
   }
 }
