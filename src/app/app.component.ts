@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
 import { AngularFireMessaging} from '@angular/fire/compat/messaging';
 import { AngularFirestore} from '@angular/fire/compat/firestore';
-
-
-=======
 import { Component, HostListener } from '@angular/core';
->>>>>>> d41f93d3b18de6a669002d8b995912029464e8ff
 
 @Component({
   selector: 'app-root',
@@ -16,7 +10,6 @@ import { Component, HostListener } from '@angular/core';
 
 })
 export class AppComponent {
-<<<<<<< HEAD
   
 
   
@@ -31,9 +24,9 @@ constructor(
   ngOnInit(){
   this.requestPermission();
   this.listenNotifications();
-  
+  }
 
-}
+
 
 requestPermission(){
 this.messaging.requestToken
@@ -47,7 +40,8 @@ listenNotifications(){
     console.log(message);
     
   });
-=======
+}
+
   installEvent: any = null;
 
   @HostListener('window:beforeinstallprompt', ['$event'])
@@ -65,6 +59,4 @@ listenNotifications(){
       });
     }
   }
->>>>>>> d41f93d3b18de6a669002d8b995912029464e8ff
-}
 }
