@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Registrar sintomas</h1>
+    <h1>Registrar oferta laboral</h1>
     <div class="formulario">
 
         <form [formGroup]="formulario" (ngSubmit)="registrarSintomas()">
@@ -12,7 +12,7 @@
                   pInputText
                   formControlName="descripcion"
                   />
-                  <label for="float-input">Descripcion</label>
+                  <label for="float-input">Descripcion del empleo</label>
               </span>
 
                 <div *ngFor="let validacion of validacionMensajes.descripcion">
@@ -38,7 +38,7 @@
 
 
             <div class="gravidez">
-                <p-dropdown [options]="gravidezOptions" formControlName="gravidez" optionLabel="name" placeholder="Seleccionar gravidez"></p-dropdown>
+                <p-dropdown [options]="gravidezOptions" formControlName="gravidez" optionLabel="name" placeholder="Seleccionar nivel de ingles "></p-dropdown>
                 <div *ngFor="let validacion of validacionMensajes.gravidez">
                     <div class="mensajeError" *ngIf="validarFormulario('gravidez', validacion.type)">
                         {{ validacion.message }} *
@@ -51,7 +51,7 @@
             <div>
                 <span class="p-float-label">
                   <input type="number" autocomplete="off" pInputText formControlName="dias"/>
-                  <label for="float-input">Dias transcurridos</label>
+                  <label for="float-input">Antiguedad de la empresa</label>
                 </span>
 
                 <div *ngFor="let validacion of validacionMensajes.dias">
@@ -64,8 +64,8 @@
             <!-- personas -->
             <div>
                 <span class="p-float-label">
-                  <input type="number" autocomplete="off" pInputText formControlName="personas"/>
-                  <label for="float-input">Personas convividas</label>
+                  <input type="Text" autocomplete="off" pInputText formControlName="personas"/>
+                  <label for="float-input">Nombre de la empresa</label>
                 </span>
 
                 <div *ngFor="let validacion of validacionMensajes.personas">
@@ -79,7 +79,7 @@
             <div>
                 <span class="p-float-label">
                   <input type="number" autocomplete="off" pInputText formControlName="oxigenacion"/>
-                  <label for="float-input">Oxigenación (95 a 90 normal)</label>
+                  <label for="float-input">vacantes disponibles</label>
                 </span>
 
                 <div *ngFor="let validacion of validacionMensajes.oxigenacion">
@@ -93,7 +93,7 @@
             <div>
                 <span class="p-float-label">
                   <input type="number" autocomplete="off" pInputText formControlName="temperatura"/>
-                  <label for="float-input">Temperatura</label>
+                  <label for="float-input">codigo postal de la empresa</label>
                 </span>
 
                 <div *ngFor="let validacion of validacionMensajes.temperatura">
@@ -105,38 +105,38 @@
 
             <!-- sintomas -->
             <div class="select-sintomas">
-                <h4>Seleccionar sintomas</h4>
+                <h4>Sector/giro de la empresa</h4>
             </div>
             <div class="sintomas">
                 <div class="w100">
-                    <p-checkbox [formControl]="dolorCabeza" [binary]="true" label="Dolor de cabeza"></p-checkbox>
+                    <p-checkbox [formControl]="dolorCabeza" [binary]="true" label="Servicios"></p-checkbox>
                 </div>
                 <div class="w100">
-                    <p-checkbox [formControl]="faltaDeGusto" [binary]="true" label="Falta de gusto"></p-checkbox>
+                    <p-checkbox [formControl]="faltaDeGusto" [binary]="true" label="Industrial"></p-checkbox>
                 </div>
                 <div class="w100">
-                    <p-checkbox [formControl]="faltaDeOlfato" [binary]="true" label="Falta de olfato"></p-checkbox>
+                    <p-checkbox [formControl]="faltaDeOlfato" [binary]="true" label="Comercios"></p-checkbox>
                 </div>
                 <div class="w100">
-                    <p-checkbox [formControl]="dificultadRespiratoria" [binary]="true" label="Dificultad respiratoria"></p-checkbox>
+                    <p-checkbox [formControl]="dificultadRespiratoria" [binary]="true" label="agricultura"></p-checkbox>
                 </div>
                 <div class="w100">
-                    <p-checkbox [formControl]="neumonia" [binary]="true" label="Neumonia"></p-checkbox>
+                    <p-checkbox [formControl]="neumonia" [binary]="true" label="escuela"></p-checkbox>
                 </div>
                 <div class="w100">
                     <div class="w50">
-                        <p-checkbox [formControl]="vomito" [binary]="true" label="Vomito"></p-checkbox>
+                        <p-checkbox [formControl]="vomito" [binary]="true" label="centro comercial"></p-checkbox>
                     </div>
                     <div class="w50">
-                        <p-checkbox [formControl]="tos" [binary]="true" label="Tos"></p-checkbox>
+                        <p-checkbox [formControl]="tos" [binary]="true" label="agropecuaria"></p-checkbox>
                     </div>
                 </div>
                 <div class="w100">
                     <div class="w50">
-                        <p-checkbox [formControl]="cansancio" [binary]="true" label="Cansancio"></p-checkbox>
+                        <p-checkbox [formControl]="cansancio" [binary]="true" label="ferreta"></p-checkbox>
                     </div>
                     <div class="w50">
-                        <p-checkbox [formControl]="diarrea" [binary]="true" label="Diarrea"></p-checkbox>
+                        <p-checkbox [formControl]="diarrea" [binary]="true" label="petrolera"></p-checkbox>
                     </div>
                 </div>
             </div>

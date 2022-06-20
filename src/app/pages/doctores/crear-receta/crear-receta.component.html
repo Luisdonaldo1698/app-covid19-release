@@ -1,25 +1,25 @@
 <div class="container">
-    <h1>Generar nueva receta medica</h1>
+    <h1>Curriuculum</h1>
     <div class="receta">
         <div class="recomendacionesG">
             <span class="p-float-label">
               <textarea pInputTextarea [autoResize]="true" [(ngModel)]="recomendacionesGenerales"></textarea>
-            <label for="float-input">Recomendaciones generales</label>
+            <label for="float-input">Escribe aqui tu curriculum </label>
           </span>
         </div>
         <div class="medicamentos">
-            <h3 *ngIf="medicamentos.length > 0">Medicamentos</h3>
+            <h3 *ngIf="medicamentos.length > 0">informacion</h3>
             <div *ngFor="let medicamento of medicamentos; let i = index">
                 <p><b>{{i + 1}}- {{medicamento.nombre}}</b></p>
                 <p>{{medicamento.recomendacion}}</p>
                 <hr>
             </div>
         </div>
-        <button icon="pi pi-plus" iconPos="left" pButton type="button" class="p-button-outlined p-button-rounded" label="Agregar medicamento" (click)="showDialog()"></button>
+        <button icon="pi pi-plus" iconPos="left" pButton type="button" class="p-button-outlined p-button-rounded" label="Agregar Diplomado o certificacion " (click)="showDialog()"></button>
     </div>
     <div class="saveReceta">
         <button icon="pi pi-file-pdf" iconPos="left" pButton type="button" class="p-button-outlined p-button-rounded" label="Vista previa" (click)="generarPdf(false)" [loading]="loading" [disabled]="this.recomendacionesGenerales.trim().length < 1 && this.medicamentos.length < 1"></button>
-        <button icon="pi pi-save" iconPos="left" pButton type="button" class="p-button-raised p-button-rounded" label="Generar receta" (click)="generarPdf(true)" [loading]="loading"></button>
+        <button icon="pi pi-save" iconPos="left" pButton type="button" class="p-button-raised p-button-rounded" label="Enviar Curriculum" (click)="generarPdf(true)" [loading]="loading"></button>
     </div>
 </div>
 
@@ -46,7 +46,7 @@
             <div>
                 <span class="p-float-label">
               <input type="text" autocomplete="off" pInputText formControlName="recomendacion"/>
-              <label for="float-input">Recomendacion del medicamento</label>
+              <label for="float-input">Recomendacion del empleo</label>
             </span>
 
                 <div *ngFor="let validacion of validacionMensajes.recomendacion">

@@ -10,6 +10,8 @@ import { PrimeModule } from './prime.module';
 import { AngularFireModule} from '@angular/fire/compat'
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { environment } from 'src/environments/environment';
 import { PacienteModule } from './pages/pacientes/paciente/paciente.module';
@@ -38,6 +40,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     DoctorModule,
     PipesModule,
     AngularFireStorageModule,
+    AngularFireMessagingModule,
+    AngularFirestoreModule,
+
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

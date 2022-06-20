@@ -6,10 +6,10 @@
     <div class="formulario">
         <div class="roles">
             <div [ngClass]="{ rolSelected: rol === 'doctor', rolUnselected: true }" (click)="changeRol()">
-                <h4>Doctor</h4>
+                <h4>Egresado</h4>
             </div>
             <div [ngClass]="{ rolSelected: rol === 'paciente', rolUnselected: true }" (click)="changeRol()">
-                <h4>Paciente</h4>
+                <h4>Empresario</h4>
             </div>
         </div>
         <form [formGroup]="formulario" (ngSubmit)="register()">

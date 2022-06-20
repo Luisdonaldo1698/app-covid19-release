@@ -134,7 +134,7 @@ export class RegistrarSintomasComponent implements OnInit {
     try {
       const resp = await this.pacienteService.registrarSintomas(sintomas)
       console.log(resp)
-      this.alertService.showToast('Sintomas registrados', 'success');
+      this.alertService.showToast('Propuesta de trabajo registrada', 'success');
       this.formulario.reset();
       this.loading = false;
       this.router.navigate(['/p']);
